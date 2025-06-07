@@ -28,53 +28,59 @@
             text-align: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 35px 40px;
+            padding: 20px 30px;
             margin: 0;
         }
         
         .header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 2.2em;
             font-weight: 600;
             letter-spacing: -1px;
         }
         
         .header p {
-            margin: 12px 0 0 0;
-            font-size: 1.1em;
+            margin: 8px 0 0 0;
+            font-size: 1em;
             opacity: 0.95;
         }
         
         .content {
-            padding: 30px;
+            padding: 20px;
         }
         
         .national-notice {
             background: #e0f2fe;
             border: 1px solid #0288d1;
             border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 24px;
+            padding: 12px;
+            margin-bottom: 16px;
             text-align: center;
         }
         
         .national-notice h4 {
             color: #0277bd;
-            margin-bottom: 8px;
+            margin: 0 0 6px 0;
+            font-size: 1.1em;
+        }
+        
+        .national-notice p {
+            margin: 0;
+            font-size: 0.9em;
         }
         
         .summary-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
         }
         
         .notice-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 24px;
+            gap: 12px;
+            margin-bottom: 16px;
         }
         
         @media (max-width: 768px) {
@@ -85,52 +91,82 @@
         
         .summary-card {
             background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             text-align: center;
             border-left: 4px solid #667eea;
         }
         
         .summary-card h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 6px 0;
             color: #667eea;
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
         
         .summary-card .number {
-            font-size: 2.5em;
+            font-size: 1.8em;
             font-weight: bold;
             color: #333;
-            margin: 10px 0;
+            margin: 6px 0;
+        }
+        
+        .summary-card p {
+            margin: 0;
+            font-size: 0.85em;
         }
         
         .recommendations {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
         }
         
         .recommendations h2 {
             color: #667eea;
-            margin-top: 0;
+            margin: 0 0 12px 0;
+            font-size: 1.4em;
             border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
         
         .recommendation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
         }
         
         .recommendation-item {
-            padding: 18px;
-            border-radius: 10px;
+            padding: 14px;
+            border-radius: 8px;
             border-left: 4px solid;
+        }
+        
+        .recommendation-item h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.1em;
+        }
+        
+        .recommendation-item p {
+            margin: 0 0 8px 0;
+            font-size: 0.9em;
+        }
+        
+        .recommendation-item ul {
+            margin: 8px 0;
+            padding-left: 16px;
+        }
+        
+        .recommendation-item li {
+            font-size: 0.85em;
+            margin-bottom: 4px;
+        }
+        
+        .recommendation-item em {
+            font-size: 0.8em;
         }
         
         .rec-excellent { 
@@ -157,13 +193,13 @@
             background: #fef3c7;
             border: 1px solid #f59e0b;
             border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 24px;
+            padding: 12px;
         }
         
         .competitive-notice h4 {
             color: #d97706;
-            margin-bottom: 8px;
+            margin: 0 0 6px 0;
+            font-size: 1.05em;
         }
         
         .competitive-schools {
@@ -274,9 +310,12 @@
         }
         
         @media (max-width: 768px) {
-            .header h1 { font-size: 2em; }
-            .summary-cards { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8em; }
+            .header p { font-size: 0.9em; }
+            .content { padding: 15px; }
+            .summary-cards { grid-template-columns: 1fr; gap: 10px; }
             .recommendation-grid { grid-template-columns: 1fr; }
+            .notice-grid { grid-template-columns: 1fr; }
         }
         
         .footer {
@@ -749,18 +788,6 @@
                         <td class="average">Average</td>
                     </tr>
                     <tr>
-                        <td class="school-name">Tallinna Ehituskool</td>
-                        <td class="place-cell">139</td>
-                        <td class="place-cell">—</td>
-                        <td class="place-cell">—</td>
-                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
-                        <td class="score-cell no-data">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="no-data">No Data</td>
-                    </tr>
-                    <tr>
                         <td class="school-name">Tallinna Teeninduskool</td>
                         <td class="place-cell">131</td>
                         <td class="place-cell">117</td>
@@ -773,45 +800,9 @@
                         <td class="no-data">No Data</td>
                     </tr>
                     <tr>
-                        <td class="school-name">Tallinna Tööstushariduskeskus</td>
-                        <td class="place-cell">119</td>
-                        <td class="place-cell">113</td>
-                        <td class="place-cell">—</td>
-                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
-                        <td class="score-cell no-data">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="no-data">No Data</td>
-                    </tr>
-                    <tr>
-                        <td class="school-name">Tallinna Pääsküla Gümnaasium</td>
-                        <td class="place-cell">117</td>
-                        <td class="place-cell">—</td>
-                        <td class="place-cell">—</td>
-                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
-                        <td class="score-cell no-data">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="no-data">No Data</td>
-                    </tr>
-                    <tr>
                         <td class="school-name">Tallinna Vanalinna Täiskasvanute Gümnaasium</td>
                         <td class="place-cell">114</td>
                         <td class="place-cell">106</td>
-                        <td class="place-cell">—</td>
-                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
-                        <td class="score-cell no-data">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="score-cell">—</td>
-                        <td class="no-data">No Data</td>
-                    </tr>
-                    <tr>
-                        <td class="school-name">Tallinna Täiskasvanute Gümnaasium</td>
-                        <td class="place-cell">113</td>
-                        <td class="place-cell">111</td>
                         <td class="place-cell">—</td>
                         <td class="trend-stable"><span class="trend-arrow">→</span></td>
                         <td class="score-cell no-data">—</td>
@@ -845,8 +836,56 @@
                         <td class="no-data">No Data</td>
                     </tr>
                     <tr>
+                        <td class="school-name">Tallinna Täiskasvanute Gümnaasium</td>
+                        <td class="place-cell">113</td>
+                        <td class="place-cell">111</td>
+                        <td class="place-cell">—</td>
+                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
+                        <td class="score-cell no-data">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="no-data">No Data</td>
+                    </tr>
+                    <tr>
+                        <td class="school-name">Tallinna Tööstushariduskeskus</td>
+                        <td class="place-cell">119</td>
+                        <td class="place-cell">113</td>
+                        <td class="place-cell">—</td>
+                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
+                        <td class="score-cell no-data">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="no-data">No Data</td>
+                    </tr>
+                    <tr>
+                        <td class="school-name">Tallinna Ehituskool</td>
+                        <td class="place-cell">139</td>
+                        <td class="place-cell">—</td>
+                        <td class="place-cell">—</td>
+                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
+                        <td class="score-cell no-data">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="no-data">No Data</td>
+                    </tr>
+                    <tr>
                         <td class="school-name">Tallinna Muusikakeskkool</td>
                         <td class="place-cell">33</td>
+                        <td class="place-cell">—</td>
+                        <td class="place-cell">—</td>
+                        <td class="trend-stable"><span class="trend-arrow">→</span></td>
+                        <td class="score-cell no-data">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="score-cell">—</td>
+                        <td class="no-data">No Data</td>
+                    </tr>
+                    <tr>
+                        <td class="school-name">Tallinna Pääsküla Gümnaasium</td>
+                        <td class="place-cell">117</td>
                         <td class="place-cell">—</td>
                         <td class="place-cell">—</td>
                         <td class="trend-stable"><span class="trend-arrow">→</span></td>
