@@ -779,6 +779,14 @@ html_content += '''
                 ⚠️ <strong>Important Note:</strong> These rankings are based on State Exam Results in Gymnasiums and do not reflect the true quality of education. Each year, schools may have students with different levels of preparation, talents, and backgrounds, which significantly affects these results.
             </p>
         </div>
+        <div style="background: #f0f9ff; border: 1px solid #0ea5e9; border-radius: 8px; padding: 16px; margin-top: 16px;">
+            <p style="color: #0c4a6e; font-size: 0.9em; margin: 0; text-align: center;">
+                📊 <strong>Data Sources:</strong> All data are based on open sources from Postimees:<br>
+                <a href="https://rus.postimees.ee/6465418/luchshaya-estonskaya-shkola-nahoditsya-v-tallinne" style="color: #0369a1; text-decoration: none;">2018 School Rankings</a> • 
+                <a href="https://rus.postimees.ee/7953716/bolshoy-obzor-rezultaty-gosekzamenov-v-gimnaziyah-kto-vozglavlyaet-reyting-russkoyazychnyh-shkol-estonii" style="color: #0369a1; text-decoration: none;">2024 State Exam Results</a> • 
+                <a href="https://services.postimees.ee/infography/2025/2507-koolide-edetabel/eestiTOP/index.html?id=eestiTOP" style="color: #0369a1; text-decoration: none;">Interactive Rankings</a>
+            </p>
+        </div>
     </div>
     
     <script>
