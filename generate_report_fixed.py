@@ -276,35 +276,49 @@ html_content = f'''<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tallinn Schools Selection Guide 2024 - National Rankings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f5f7fa;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
+            font-size: 14px;
+        }}
+        
+        .container {{
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }}
         
         .header {{
             text-align: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            padding: 35px 40px;
+            margin: 0;
         }}
         
         .header h1 {{
             margin: 0;
-            font-size: 2.5em;
-            font-weight: 300;
+            font-size: 2.8em;
+            font-weight: 600;
+            letter-spacing: -1px;
         }}
         
         .header p {{
-            margin: 10px 0 0 0;
+            margin: 12px 0 0 0;
             font-size: 1.1em;
-            opacity: 0.9;
+            opacity: 0.95;
+        }}
+        
+        .content {{
+            padding: 30px;
         }}
         
         .national-notice {{
@@ -323,16 +337,29 @@ html_content = f'''<!DOCTYPE html>
         
         .summary-cards {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }}
+        
+        .notice-grid {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }}
+        
+        @media (max-width: 768px) {{
+            .notice-grid {{
+                grid-template-columns: 1fr;
+            }}
         }}
         
         .summary-card {{
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
             text-align: center;
             border-left: 4px solid #667eea;
         }}
@@ -352,10 +379,10 @@ html_content = f'''<!DOCTYPE html>
         
         .recommendations {{
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
         }}
         
         .recommendations h2 {{
@@ -367,14 +394,14 @@ html_content = f'''<!DOCTYPE html>
         
         .recommendation-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
         }}
         
         .recommendation-item {{
-            padding: 20px;
-            border-radius: 8px;
+            padding: 18px;
+            border-radius: 10px;
             border-left: 4px solid;
         }}
         
@@ -534,10 +561,12 @@ html_content = f'''<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🏫 Tallinn Schools Selection Guide 2024</h1>
-        <p>National Rankings & Performance Analysis (2018-2024)</p>
-    </div>
+    <div class="container">
+        <div class="header">
+            <h1>🏫 Tallinn Schools Selection Guide 2024</h1>
+            <p>National Rankings & Performance Analysis (2018-2024)</p>
+        </div>
+        <div class="content">
 
     <div class="national-notice">
         <h4>📊 National Context</h4>
@@ -570,16 +599,20 @@ html_content = f'''<!DOCTYPE html>
     <div class="recommendations">
         <h2>🎯 Realistic School Selection Recommendations</h2>
         
-        <div class="competitive-notice">
-            <h4>⚠️ Highly Competitive Schools (Extremely Difficult Admission)</h4>
-            <p>The following schools have very high entrance requirements and limited acceptance rates. Consider them as "reach" schools only:</p>
-            <p class="competitive-schools">Tallinna Reaalkool, Tallinna Inglise Kolledž, Gustav Adolfi Gümnaasium, Tallinna Prantsuse Lütseum, Tallinna 21. Kool, Kadrioru Saksa Gümnaasium</p>
-        </div>
-        
-        <div style="background: #fff7ed; border: 1px solid #ea580c; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
-            <h4 style="color: #c2410c; margin-bottom: 8px;">🏫 Private Schools (Not Included in Public School Selection)</h4>
-            <p>The following are private schools with tuition fees and are excluded from public school selection considerations:</p>
-            <p style="font-style: italic; color: #9a3412; font-weight: 500;">EBS Gümnaasium, Rocca al Mare Kool, Audentese Spordigümnaasium</p>
+        <div class="notice-grid">
+            <div class="competitive-notice">
+                <h4>⚠️ Highly Competitive Schools</h4>
+                <p style="font-size: 0.9em; margin-bottom: 8px;"><strong>Extremely Difficult Admission</strong></p>
+                <p style="font-size: 0.85em; margin-bottom: 10px;">Very high entrance requirements and limited acceptance rates. Consider as "reach" schools only:</p>
+                <p class="competitive-schools" style="font-size: 0.8em;">Tallinna Reaalkool, Tallinna Inglise Kolledž, Gustav Adolfi Gümnaasium, Tallinna Prantsuse Lütseum, Tallinna 21. Kool, Kadrioru Saksa Gümnaasium</p>
+            </div>
+            
+            <div style="background: #fff7ed; border: 1px solid #ea580c; border-radius: 8px; padding: 16px;">
+                <h4 style="color: #c2410c; margin-bottom: 8px; margin-top: 0;">🏫 Private Schools</h4>
+                <p style="font-size: 0.9em; margin-bottom: 8px; color: #c2410c;"><strong>Not Included in Public School Selection</strong></p>
+                <p style="font-size: 0.85em; margin-bottom: 10px;">Private schools with tuition fees, excluded from public school considerations:</p>
+                <p style="font-style: italic; color: #9a3412; font-weight: 500; font-size: 0.8em;">EBS Gümnaasium, Rocca al Mare Kool, Audentese Spordigümnaasium</p>
+            </div>
         </div>
         
         <div class="recommendation-grid">
@@ -787,6 +820,8 @@ html_content += '''
                 <a href="https://services.postimees.ee/infography/2025/2507-koolide-edetabel/eestiTOP/index.html?id=eestiTOP" style="color: #0369a1; text-decoration: none;">Interactive Rankings</a>
             </p>
         </div>
+        </div>
+    </div>
     </div>
     
     <script>
